@@ -7,10 +7,10 @@ public:
         for(int i=0 ; i<operations.size() ; i++)
         {
             if(operations[i] == "X++" || operations[i] == "++X")
-            X++;
+            ++X;
             
             else
-            X--;
+            --X;
         }
         
         return X;
