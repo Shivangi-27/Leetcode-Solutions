@@ -21,7 +21,7 @@ public:
         
         q.push(root);
         
-        while(!q.empty())
+        while(q.empty() != true)
         {
             vector<int> temp;
             int n = q.size();
