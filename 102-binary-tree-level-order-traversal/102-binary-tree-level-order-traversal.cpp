@@ -30,6 +30,7 @@ public:
             {
                 TreeNode *node = q.front();
                 q.pop();
+                temp.push_back(node->val);
                 
                 if(node->left != NULL)
                 q.push(node->left);
@@ -37,7 +38,7 @@ public:
                 if(node->right != NULL)
                 q.push(node->right);
                 
-                temp.push_back(node->val);
+                
             }
             ans.push_back(temp);
         }
