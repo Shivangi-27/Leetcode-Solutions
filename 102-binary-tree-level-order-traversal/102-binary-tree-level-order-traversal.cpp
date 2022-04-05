@@ -23,27 +23,25 @@ public:
         
         while(!q.empty())
         {
-            int n = q.size();
             vector<int> temp;
+            int n = q.size();
             
             for(int i=0 ; i<n ; i++)
             {
-                TreeNode *node = q.front();
+                TreeNode *p= q.front();
                 q.pop();
-                temp.push_back(node->val);
                 
-                if(node->left != NULL)
-                q.push(node->left);
+                temp.push_back(p->val);
                 
-                if(node->right != NULL)
-                q.push(node->right);
+                if(p->left != NULL)
+                q.push(p->left);
                 
-                
+                if(p->right != NULL)
+                q.push(p->right);
             }
             ans.push_back(temp);
         }
         
         return ans;
-        
     }
 };
