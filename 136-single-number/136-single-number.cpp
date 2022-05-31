@@ -6,17 +6,12 @@ public:
         int ans;
         
         for(int i=0 ; i<nums.size() ; i++)
-        {
-            int key = nums[i];
-            map[key]++;
-        }
+        map[nums[i]]++;
         
         for(auto it=map.begin() ; it!=map.end() ; it++)
-        {
-            if(it->second == 1)
-            ans = it->first;                
-        }
-        
+        if(it->second == 1)
+        ans = it->first;                
+                
         return ans;
     }
 };
