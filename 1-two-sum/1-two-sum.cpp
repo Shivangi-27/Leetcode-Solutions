@@ -21,16 +21,18 @@ public:
 //         return res;
         
         unordered_map<int,int> map;
+        //key = nums[i] val = index of nums
         vector<int> res;
         
         for(int i=0 ; i<nums.size() ; i++)
         {
-            if(map.find(target-nums[i]) != map.end())
+            if(map.find(nums[i]) == map.end())
+            map[nums[i]] = i;
+            if(map.find(target-nums[i]) != map.end() && i != map[target - nums[i]])
             {
                 res.push_back(map[target-nums[i]]);
                 res.push_back(i);
             }
-			map[nums[i]] = i;
         }
         return res;
     }
