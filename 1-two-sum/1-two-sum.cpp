@@ -30,6 +30,8 @@ public:
                 res.push_back(map[target-nums[i]]);
                 res.push_back(i);
             }
+            
+            else
             map[nums[i]] = i;
         }
         return res;
